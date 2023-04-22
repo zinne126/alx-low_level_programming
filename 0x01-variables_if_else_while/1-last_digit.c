@@ -17,7 +17,7 @@ int main(void)
 	{
 		printf("greater than 5\n");
 	}
-	else if (abs(n) % 10 != 0)
+	else if (abs(n) % 10 == 0)
 	{
 		printf("0\n");
 	}
