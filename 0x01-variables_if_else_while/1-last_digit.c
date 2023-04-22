@@ -13,11 +13,11 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	printf("Last digit of %d is %d and is ", n, abs(n) % 10);
 
-	if (abs(n) % 10 < 5)
+	if (abs(n) % 10 > 5)
 	{
 		printf("greater than 5\n");
 	}
-	else if (abs(n) % 10 == 0)
+	else if (abs(n) % 10 != 0)
 	{
 		printf("0\n");
 	}
