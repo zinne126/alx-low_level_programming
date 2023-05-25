@@ -1,6 +1,4 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
 
 /**
  * print_all - prints anything
@@ -32,7 +30,7 @@ void print_all(const char * const format, ...)
 					break;
 				case 's':
 					str = va_arg(list, char *);
-					if (str)
+					if (!str)
 						str = "(nil)";
 					printf("%s%s", sep, str);
 					break;
@@ -44,6 +42,7 @@ void print_all(const char * const format, ...)
 			i++;
 		}
 	}
+
 	printf("\n");
 	va_end(list);
 }
